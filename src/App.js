@@ -1,4 +1,4 @@
-import ExpenseItem from "./Expense/ExpenseItem";
+import Expense from "./Expense/ExpenseItem";
 
 function App() {
   const Sampleexpense = [
@@ -33,17 +33,16 @@ function App() {
   ];
   return (
     <div>
-      <h1>let's start learning react with Nafees!</h1>
 
       {Sampleexpense.map((Sample) => {
         return (
           <div key={Sample.id}>
-            <ExpenseItem
+            <Expense
               title={Sample.title}
               date={Sample.date}
               amount={Sample.amount}
               LocationOfExpenditure={Sample.LocationOfExpenditure}
-            ></ExpenseItem>
+            />
           </div>
         );
       })}
