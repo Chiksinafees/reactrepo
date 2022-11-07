@@ -1,4 +1,4 @@
-import "./Expenseitem.css";
+import "./ExpenseItem.css";
 
 function ExpenseDetails(props) {
   const title = props.title;

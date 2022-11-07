@@ -1,9 +1,11 @@
+import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails ";
+import Card from "./Card";
 
 function Expense(props) {
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.date} />
 
       <h2>{props.title}</h2>
@@ -12,8 +14,17 @@ function Expense(props) {
       <div>
         <ExpenseDetails amount={props.amount} />
       </div>
-    </div>
+    </Card>
   );
+  // just did for checking how createElement work
+  //   React.createElement("div",{ className: "expense-item" },
+  //   React.createElement(ExpenseDate, { date: props.date }),
+  //   React.createElement("h2", {}, props.title),
+  //   React.createElement("h2", {}, props.LocationOfExpenditure),
+  //   React.createElement("div",{},
+  //   React.createElement(ExpenseDetails, { amount: props.amount })
+  //   )
+  // );
 }
 
 export default Expense;
