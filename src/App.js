@@ -1,8 +1,8 @@
-import Expense from "./Expense/ExpenseItem";
-import Card from "./Expense/Card";
+import Expense from "./component/expenses/ExpenseItem";
+import Card from "./component/UI/Card";
 import "./App.css";
 
-function App() {
+const App = () => {
   const Sampleexpense = [
     {
       id: "a1",
@@ -49,6 +49,6 @@ function App() {
       })}
     </Card>
   );
-}
+};
 
 export default App;
